@@ -10,6 +10,8 @@ import { useState, useEffect } from "react";
 import { getApiConfiguration } from "./store/homeSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchDataFromApi } from "../api";
+import Img from '../src/Components/lazy-load-img'
+
 
 function App() {
   const dispatch = useDispatch();
@@ -26,7 +28,9 @@ function App() {
         backdrop: res.images.secure_base_url + "original",
         poster: res.images.secure_base_url + "original",
         profile: res.images.secure_base_url + "original",
+        
       };
+      // console.log(url.profile)
       dispatch(getApiConfiguration(url));
     });
   };
@@ -35,10 +39,12 @@ function App() {
     <>
       <Header />
       <HeroBanner />
+      {/* <Img src={background} /> */}
       {/* make a div with an bakcgroun image and a video absoloute chech if video is appearing behind the imaged */}
       <div className="container">
         <Viewers />
         <Home homeUrl={url} />
+
       </div>
     </>
   );

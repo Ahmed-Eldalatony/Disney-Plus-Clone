@@ -93,7 +93,7 @@ const StyledAside = styled.aside`
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 100;
+  z-index: 200;
 
   nav:hover .overlay {
     position: absolute;

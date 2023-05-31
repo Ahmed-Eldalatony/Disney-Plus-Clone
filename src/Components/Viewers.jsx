@@ -6,6 +6,7 @@ function Viewers() {
   return (
     // ! Who this is so stupid every viewer should be a component man or some how dynamic
     <StyledViewer>
+      <div className="overlay h"></div>
     <div>
         <img src="../../public/images/viewers-disney.png" alt="" />
     <video autoPlay loop muted  >
@@ -50,13 +51,26 @@ function Viewers() {
 
 export default Viewers
 const StyledViewer= styled.div`
-    margin-top:150px;
+
+  position: relative;
+
+    margin-top:63%;
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
     gap: 3rem;
     padding: 5rem;
     /*! I will prefer accoridon*/
-div{
+    .overlay.h{
+      width: 100%;
+      background-image:linear-gradient(to top,rgba(13,13,13,1)10% ,
+      rgba(13,13,13,85)30%,
+      rgba(13,13,13,0)100% );
+      
+      min-height: 42rem;
+      position:absolute ;
+      bottom: 15rem;
+    }
+div:not(.overlay.h){
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -89,6 +103,7 @@ div{
         opacity: 1;
       }
     }
+  
 
  
 }
@@ -100,7 +115,7 @@ div{
     --card-background: linear-gradient(#30323e,#1e1f2a) 0% 0%/cover;  */
   
   
-
+    
 
 
 `

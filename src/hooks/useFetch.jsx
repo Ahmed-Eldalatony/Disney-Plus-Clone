@@ -4,6 +4,7 @@ const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(null);
   const [error, setError] = useState(null);
+  const [movieId,setMovieId]= useState()
 
   useEffect(() => {
     setLoading("loading...");
@@ -14,6 +15,7 @@ const useFetch = (url) => {
       .then((res) => {
         setLoading(false);
         setData(res);
+        setMovieId(res?.results?.[1].id)
       })
       .catch((err) => {
         setLoading(false);
@@ -21,7 +23,7 @@ const useFetch = (url) => {
       });
   }, [url]);
 
-  return { data, loading, error };
+  return { data, loading, error ,movieId };
 };
 
 export default useFetch;

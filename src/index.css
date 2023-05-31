@@ -3,6 +3,9 @@
 }
 body{
     font-size: 1.6rem;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Rubik Puddles', cursive;
+    line-height: 1.6 ;
 }
 *{
     margin: 0;
