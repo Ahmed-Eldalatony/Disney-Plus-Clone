@@ -51,10 +51,12 @@ function Viewers() {
 
 export default Viewers
 const StyledViewer= styled.div`
+ background-color: rgb(13, 13, 13);
+
 
   position: relative;
 
-    margin-top:63%;
+    margin-top:55%;
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
     gap: 3rem;
@@ -62,8 +64,9 @@ const StyledViewer= styled.div`
     /*! I will prefer accoridon*/
     .overlay.h{
       width: 100%;
-      background-image:linear-gradient(to top,rgba(13,13,13,1)10% ,
-      rgba(13,13,13,85)30%,
+      background-image:linear-gradient(to top,rgba(13,13,13,.9)35% ,
+      rgba(13,13,13,.35)50%,
+      rgba(13,13,13,.1)70%,
       rgba(13,13,13,0)100% );
       
       min-height: 42rem;

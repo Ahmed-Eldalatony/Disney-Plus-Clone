@@ -1,9 +1,8 @@
-// import app.css
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import useFetch from "./hooks/useFetch";
-import HeroBanner from "./Components/homeBanner";
-import StyledComponent from "styled-components";
+import StyledComponent from "styled-components"
+import HeroBanner from "./Components/homeBanner";;
 import axios from "axios";
 import Viewers from "./Components/Viewers";
 import { useState, useEffect } from "react";
@@ -11,6 +10,7 @@ import { getApiConfiguration } from "./store/homeSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchDataFromApi } from "../api";
 import Img from '../src/Components/lazy-load-img'
+import MoviesList from "./Components/MoviesList";
 
 
 function App() {
@@ -44,6 +44,8 @@ function App() {
       <div className="container">
         <Viewers />
         <Home homeUrl={url} />
+        <MoviesList slider={"--disney-originals-slider"} />
+        <MoviesList />
 
       </div>
     </>

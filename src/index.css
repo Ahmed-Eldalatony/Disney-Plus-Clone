@@ -1,11 +1,17 @@
 :root{
     font-size: 62.5%;
-}
+    /* --slider-index:0; */
+
+} 
+/* .carousel{
+    --slider-index:0;
+} */
 body{
     font-size: 1.6rem;
     /* font-family: 'Inter', sans-serif; */
     font-family: 'Rubik Puddles', cursive;
     line-height: 1.6 ;
+    overflow-x: hidden !important;
 }
 *{
     margin: 0;

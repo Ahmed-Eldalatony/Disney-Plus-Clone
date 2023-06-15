@@ -28,7 +28,7 @@ const HeroBanner = () => {
   const movieUrl= `https://api.themoviedb.org/3/movie/${movieId}`
 
 
- 
+
 
   useEffect(() => {
 
@@ -45,6 +45,7 @@ const HeroBanner = () => {
 
 
   }, [data]);
+  
 
   // const searchQueryHandler = (event) => {
   //     if (event.key === "Enter" && query.length > 0) {
@@ -70,7 +71,7 @@ const HeroBanner = () => {
       setHours(hours)
       const minutes = runtime%60
       setMinutes(minutes)
-      
+
 
 
      } )
@@ -144,6 +145,10 @@ const HeroBanner = () => {
                 </div>
               
           )}
+          const fetch = require('node-fetch');
+
+
+
 
   {/* //         <div className="opacity-layer"></div>
   //         <ContentWrapper>
@@ -175,7 +180,6 @@ const HomeBanner=styled.div`
 /* font-family: 'Inter', sans-serif; */
 font-family: 'Rubik Puddles', cursive;
 
-
   font-size: 1.8rem ;
   position:relative;
   border:1px solid red; // Wut???
@@ -196,9 +200,10 @@ font-family: 'Rubik Puddles', cursive;
   height: 100vh;
   background-image:linear-gradient(to right, rgb(13, 13, 13,.98) 0px ,
   rgb(13,13,13,.97) 6% ,
-  rgba(13,13,13,.95) 7% ,
-  rgba(13,13,13,.82) 20% ,
-  rgba(13,13,13,.68) 100% );
+  rgba(13,13,13,.96) 7% ,
+  rgba(13,13,13,.87) 20% ,
+  rgba(13,13,13,.80) 30% ,
+  rgba(13,13,13,.75) 100% );
   inset:0;
   z-index:100;
   /* &.h{
@@ -211,7 +216,6 @@ font-family: 'Rubik Puddles', cursive;
 
 
   .background{
-    /* isolation:isolate; */
   width:100% ;
   height: 100%;
 }
@@ -219,11 +223,11 @@ font-family: 'Rubik Puddles', cursive;
 
 
 .overview {
-  z-index:500;
-  top:35vh;
+  z-index:100;
+  top:25vh;
   left:11rem;
   position:absolute;
-  width: 50rem;
+  width: 47rem;
 
 }
 .details,.duration{
@@ -246,14 +250,15 @@ p{
 font-weight:normal;
 width: 45ch;
 margin-bottom:1.5rem;
+max-height:5rem ;
 }
 .isolate{
-  width:60rem  ;
+  width:100%  ;
   bottom:100px;
   margin-bottom:1rem;
 }
 .logo{
-  width:45rem;
+  width:100%;
 }
 span{
   display:block;
